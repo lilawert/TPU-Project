@@ -1,37 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Подключение внешнего стилевого файла -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Мета-теги для кодировки, viewport и совместимости с браузерами -->
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Отметка студентов </title>
+    
+    <!-- Заголовок страницы -->
+    <title>Отметка студентов</title>
 </head>
 <body>
+    <!-- Логотип ТПУ -->
     <img src="https://img.artlebedev.ru/tpu/tpu-logo.png" height="170" width="200" alt="Логотип ТПУ" align="top"/>
+    
+    <!-- Форма для авторизации студентов -->
     <form>
-<div>
-    <h1> Авторизация для отметки учащихся </h1>
-    <label>
-        Введите логин:
-        <input type="text" name="login" spellcheck="false" placeholder="aaa1@tpu.ru" required>
-    </label>
-</div>
-<div>
-    <label>
-        Введите пароль:
-        <input type="password" name="password" spellcheck="false" placeholder="••••••" required>
-    </label>
-</div>
+        <!-- Блок для ввода логина -->
+        <div>
+            <h1>Авторизация для отметки учащихся</h1>
+            <label>
+                Введите логин:
+                <input type="text" name="login" spellcheck="false" placeholder="aaa1@tpu.ru" required>
+            </label>
+        </div>
+        
+        <!-- Блок для ввода пароля -->
+        <div>
+            <label>
+                Введите пароль:
+                <input type="password" name="password" spellcheck="false" placeholder="••••••" required>
+            </label>
+        </div>
+        
+        <!-- Обертка для кнопки входа и QR-кода -->
         <div class="wrapper">
+            <!-- Блок для кнопки входа -->
             <div class="form">
-                <button class= "c-button" type="button">Вход</button>
+                <button class="c-button" type="button">Вход</button>
             </div>
+            
+            <!-- Блок для отображения QR-кода -->
             <div class="qr-code">
                 <img src="" alt="qr-code">
             </div>
         </div>
+        
+        <!-- Скрипт для автоматической генерации QR-кода -->
         <script src="automqr.js"></script>
     </form>
 </body>
