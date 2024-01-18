@@ -1,41 +1,54 @@
+/* Глобальные стили для тела документа */
 body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    text-align: center;
-    line-height: 30px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* Устанавливаем шрифт для текста */
+    text-align: center; /* Центрируем текст по горизонтали */
+    line-height: 30px; /* Задаем высоту строки текста */
 }
+
+/* Стили для кнопки */
 .c-button {
-    min-width: 100px;
-    font-family: inherit;
-    appearance: none;
-    border: 0;
-    border-radius: 5px;
-    background: #29bf46;
-    color: #fff;
-    padding: 10px 25px;
-    font-size: 1rem;
-    cursor: pointer;
+    min-width: 100px; /* Минимальная ширина кнопки */
+    font-family: inherit; /* Наследуем шрифт от родительского элемента (body) */
+    appearance: none; /* Убираем стандартное оформление элемента (браузерного стиля) */
+    border: 0; /* Убираем границу */
+    border-radius: 5px; /* Скругляем углы */
+    background: #29bf46; /* Задаем цвет фона */
+    color: #fff; /* Устанавливаем цвет текста */
+    padding: 10px 25px; /* Добавляем внутренние отступы */
+    font-size: 1rem; /* Устанавливаем размер шрифта */
+    cursor: pointer; /* Устанавливаем вид курсора при наведении */
 }
+
+/* Стили для кнопки при наведении */
 .c-button:hover {
-    background: #26963a;
+    background: #26963a; /* Меняем цвет фона при наведении */
 }
+
+/* Стили для кнопки при фокусировке (например, при нажатии клавиши Tab) */
 .c-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px #cbeecc;
+    outline: none; /* Убираем стандартную обводку (фокус) */
+    box-shadow: 0 0 0 4px #cbeecc; /* Добавляем тень при фокусировке */
 }
+
+/* Стили для QR-кода */
 .qr-code {
-    opacity: 0;
-    display: flex;
-    padding: 45px 0;
-    border-radius: 5px;
-    align-items: center;
-    pointer-events: none;
-    justify-content: center;
+    opacity: 0; /* Начальная непрозрачность (делаем элемент невидимым) */
+    display: flex; /* Используем flex для центрирования содержимого */
+    padding: 45px 0; /* Добавляем внутренние отступы сверху и снизу */
+    border-radius: 5px; /* Скругляем углы */
+    align-items: center; /* Выравниваем содержимое по центру по вертикали */
+    pointer-events: none; /* Запрещаем элементу принимать события указателя (невзаимодействие) */
+    justify-content: center; /* Выравниваем содержимое по центру по горизонтали */
 }
+
+/* Стили для QR-кода, когда его родительский контейнер имеет класс "active" */
 .wrapper.active .qr-code {
-    opacity: 1;
-    pointer-events: auto;
-    transition: opacity 0.5s 0.05s ease;
+    opacity: 1; /* Устанавливаем полную непрозрачность */
+    pointer-events: auto; /* Разрешаем элементу принимать события указателя */
+    transition: opacity 0.5s 0.05s ease; /* Добавляем плавный переход для свойства непрозрачности */
 }
+
+/* Стили для изображения внутри QR-кода */
 .qr-code img {
-    width: 250px;
+    width: 250px; /* Задаем ширину изображения */
 }
